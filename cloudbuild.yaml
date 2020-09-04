@@ -7,19 +7,8 @@ steps:
 
 - id: 'Build images'
   name: 'gcr.io/cloud-builders/docker'
-  args:
-  - 'build'
-  - '--build-arg'
-  - 'VERSION=0.0.1'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/go-hpa:latest'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/go-hpa:0.0.1'
-  - '.'
-  - name: 'gcr.io/$PROJECT_ID/go-hpa'
-  args: ['version']
-
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/go-hpa:0.0.1', '-t', 'gcr.io/$PROJECT_ID/go-hpa:latest', '.']
+  
 images:
 - 'gcr.io/$PROJECT_ID/go-hpa:latest'
 - 'gcr.io/$PROJECT_ID/go-hpa:0.0.1'
-tags: ['0.0.1']
