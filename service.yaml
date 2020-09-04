@@ -1,0 +1,11 @@
+version: v1
+kind: Service
+metadata:
+ name: go-hpa
+spec:
+ selector:
+  app: go-hpa
+type: LoadBalance
+ports:
+- port: 8080
+   
