@@ -2,7 +2,7 @@ steps:
 
 - id: 'Teste main'
   name: "gcr.io/cloud-builders/go"
-  args: ["test","main"]
+  args: ["test"]
   env: ["GOPATH=."]
 
 - id: 'Build images'
