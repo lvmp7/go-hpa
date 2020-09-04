@@ -1,12 +1,12 @@
 steps:
 
 - id: 'Teste main'
-- name: "gcr.io/cloud-builders/go"
+  name: "gcr.io/cloud-builders/go"
   args: ["test","main"]
   env: ["GOPATH=."]
 
 - id: 'Build images'
-- name: 'gcr.io/cloud-builders/docker'
+  name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
   - '--build-arg'
