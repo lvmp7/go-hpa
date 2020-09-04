@@ -18,6 +18,5 @@ func funcaoMaluca() {
 	x := 0.0001
 	for i := 0; i < 100000; i++ {
 		x += math.Sqrt(x)
-		fmt.Println(x)
 	}
 }
