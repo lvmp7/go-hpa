@@ -14,7 +14,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/go-hpa:$SHORT_SHA']
 
 - id: "Adjust deployment file"
-  name: "gcr.io/cloud-builders/go"
+  name: "gcr.io/cloud-builders/gcloud"
   entrypoint: 'bin/sh'
   args:
     - 'c'
