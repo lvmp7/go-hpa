@@ -29,5 +29,5 @@ steps:
     - '-f'
     - 'k8s/go-hpa/deployment-new.yaml'
   env:
-    - 'CLOUDSDK_COMPUTER_ZONE=us-central1-c'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-go-hpa'
+  - 'CLOUDSDK_COMPUTER_ZONE=us-central1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-go-hpa'
