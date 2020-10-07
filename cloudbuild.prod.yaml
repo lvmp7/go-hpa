@@ -25,10 +25,9 @@ steps:
 - id: "get pods"
   name: "gcr.io/cloud-builders/kubectl"
   args: ['get','pods']
-  env: [
-    'CLOUDSDK_COMPUTER_ZONE=us-central1-c',
-    'CLOUDSDK_CONTAINER_CLUSTER=cluster-go-hpa',
-  ]
+  env:
+    - 'CLOUDSDK_COMPUTER_ZONE=us-central1-c'
+    - CLOUDSDK_CONTAINER_CLUSTER=cluster-go-hpa'
 
 - id: "Deploying to k8s"
   name: "gcr.io/cloud-builders/kubectl"
