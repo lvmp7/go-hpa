@@ -24,8 +24,12 @@ steps:
 
 - id: "Deploying to k8s"
   name: "gcr.io/cloud-builders/kubectl"
-  env: ["CLOUDSDK_COMPUTER_ZONE=us-central1-c","CLOUDSDK_CONTAINER_CLUSTER=cluster-1"]
   args: 
     - 'apply'
     - '-f'
     - 'k8s/go-hpa/deployment-new.yaml'
+  env: [
+    'CLOUDSDK_COMPUTER_ZONE=us-central1-c',
+    'CLOUDSDK_CONTAINER_CLUSTER=cluster-go-hpa',
+    ]
+  
